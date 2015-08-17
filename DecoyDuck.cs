@@ -1,26 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using StrategyPatternDuck.FlyBehavior;
+using StrategyPatternDuck.QuackBehavior;
 
 namespace StrategyPatternDuck
 {
     public class DecoyDuck : Duck
     {
+        private IFlyBehavior _FlyBehavior;
+        private IQuackBehavior _QuackBehavior;
         public override void Display()
         {
             Console.WriteLine("I am a wooden decoy duck.");
         }
-
-        public override void Quack()
+        public override void PerformQuack()
         {
-            Console.WriteLine("This duck cannot quack.");
+            this._QuackBehavior = new MuteQuack();
+            this._QuackBehavior.Quack();
         }
-
-        public override void Fly()
+        public override void PerformFly()
         {
-            Console.WriteLine("Unfortunately, this duck cannot fly.");
+            this._FlyBehavior = new FlyNoWay();
+            this._FlyBehavior.Fly();
         }
     }
 }

@@ -1,22 +1,26 @@
 ﻿using System;
+using StrategyPatternDuck.QuackBehavior;
+using StrategyPatternDuck.FlyBehavior;
 
 namespace StrategyPatternDuck
 {
     public class RubberDuck : Duck
     {
-        public override void Quack()
-        {
-            Console.WriteLine("Squeak, squeak...");
-        }
-
+        private IQuackBehavior _QuackBehavior;
+        private IFlyBehavior _FlyBehavior;
         public override void Display()
         {
             Console.WriteLine("I am a rubber duck.");
         }
-
-        public override void Fly()
+        public override void PerformQuack()
         {
-            Console.WriteLine("Unfortunately, this duck cannot fly.");
+            this._QuackBehavior = new Squeak();
+            this._QuackBehavior.Quack();
+        }
+        public override void PerformFly()
+        {
+            this._FlyBehavior = new FlyNoWay();
+            this._FlyBehavior.Fly();
         }
     }
 }

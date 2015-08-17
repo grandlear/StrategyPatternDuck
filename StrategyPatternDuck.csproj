@@ -43,9 +43,16 @@
   <ItemGroup>
     <Compile Include="DecoyDuck.cs" />
     <Compile Include="Duck.cs" />
+    <Compile Include="FlyBehavior\FlyNoWay.cs" />
+    <Compile Include="FlyBehavior\FlyWithWings.cs" />
+    <Compile Include="FlyBehavior\IFlyBehavior.cs" />
     <Compile Include="MallardDuck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuackBehavior\IQuackBehavior.cs" />
+    <Compile Include="QuackBehavior\MuteQuack.cs" />
+    <Compile Include="QuackBehavior\QuackQuack.cs" />
+    <Compile Include="QuackBehavior\Squeak.cs" />
     <Compile Include="RedheadDuck.cs" />
     <Compile Include="RubberDuck.cs" />
   </ItemGroup>

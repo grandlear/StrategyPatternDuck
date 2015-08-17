@@ -10,27 +10,27 @@ namespace StrategyPatternDuck
 
             Duck redheadDuck = new RedheadDuck();
             redheadDuck.Display();
-            redheadDuck.Quack();
+            redheadDuck.PerformQuack();
             redheadDuck.Swim();
-            redheadDuck.Fly();
+            redheadDuck.PerformFly();
 
             Duck mallardDuck = new MallardDuck();
             mallardDuck.Display();
-            mallardDuck.Quack();
+            mallardDuck.PerformQuack();
             mallardDuck.Swim();
-            mallardDuck.Fly();
+            mallardDuck.PerformFly();
 
             Duck rubberDuck = new RubberDuck();
             rubberDuck.Display();
-            rubberDuck.Quack();
+            rubberDuck.PerformQuack();
             rubberDuck.Swim();
-            rubberDuck.Fly();
+            rubberDuck.PerformFly();
 
             Duck decoyDuck = new DecoyDuck();
             decoyDuck.Display();
-            decoyDuck.Quack();
+            decoyDuck.PerformQuack();
             decoyDuck.Swim();
-            decoyDuck.Fly();
+            decoyDuck.PerformFly();
 
             Duck userDuck = null;
 
@@ -38,6 +38,8 @@ namespace StrategyPatternDuck
             {
                 Console.WriteLine("What duck would you like to observe? Mallard, Redhead, Rubber or Decoy?");
                 var choice = Console.ReadLine().ToLower();
+
+                
 
                 switch (choice.Split(' ')[0])
                 {
@@ -60,9 +62,9 @@ namespace StrategyPatternDuck
             }
 
             userDuck.Display();
-            userDuck.Quack();
+            userDuck.PerformQuack();
             userDuck.Swim();
-            userDuck.Fly();
+            userDuck.PerformFly();
 
             Console.WriteLine("Thanks for visiting.  Come back soon!");
             Console.ReadLine();
