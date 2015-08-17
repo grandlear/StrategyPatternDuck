@@ -1,0 +1,6 @@
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\bin\Debug\StrategyPatternDuck.exe.config
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\obj\Debug\StrategyPatternDuck.csprojResolveAssemblyReference.cache
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\bin\Debug\StrategyPatternDuck.exe
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\bin\Debug\StrategyPatternDuck.pdb
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\obj\Debug\StrategyPatternDuck.exe
+c:\users\mwalton\documents\visual studio 2013\Projects\StrategyPatternDuck\StrategyPatternDuck\obj\Debug\StrategyPatternDuck.pdb
