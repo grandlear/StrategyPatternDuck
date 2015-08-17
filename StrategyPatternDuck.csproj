@@ -44,6 +44,7 @@
     <Compile Include="DecoyDuck.cs" />
     <Compile Include="Duck.cs" />
     <Compile Include="FlyBehavior\FlyNoWay.cs" />
+    <Compile Include="FlyBehavior\FlyRocketPowered.cs" />
     <Compile Include="FlyBehavior\FlyWithWings.cs" />
     <Compile Include="FlyBehavior\IFlyBehavior.cs" />
     <Compile Include="MallardDuck.cs" />

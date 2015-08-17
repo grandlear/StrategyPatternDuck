@@ -1,4 +1,5 @@
 ﻿using System;
+using StrategyPatternDuck.FlyBehavior;
 
 namespace StrategyPatternDuck
 {
@@ -75,6 +76,21 @@ namespace StrategyPatternDuck
             userDuck.PerformFly();
 
             Console.WriteLine();
+
+            Console.WriteLine("Want to see something cool?");
+            char userSelection = Console.ReadLine().ToLower()[0];
+            if (userSelection == 'y')
+            {
+                Duck wishfulRubberDuck = new RubberDuck();
+                wishfulRubberDuck.Display();
+                wishfulRubberDuck.PerformFly();
+
+                //Strap on a rocket to this little ducky
+                wishfulRubberDuck.SetFlyBehavior(new FlyRocketPowered());
+
+                //Watch him fly!
+                wishfulRubberDuck.PerformFly();
+            }
 
             Console.WriteLine("Thanks for visiting.  Come back soon!");
             Console.ReadLine();
