@@ -13,5 +13,10 @@ namespace StrategyPatternDuck
         {
             Console.WriteLine("I am a rubber duck.");
         }
+
+        public override void Fly()
+        {
+            Console.WriteLine("Unfortunately, this duck cannot fly.");
+        }
     }
 }

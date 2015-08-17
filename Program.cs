@@ -26,11 +26,17 @@ namespace StrategyPatternDuck
             rubberDuck.Swim();
             rubberDuck.Fly();
 
+            Duck decoyDuck = new DecoyDuck();
+            decoyDuck.Display();
+            decoyDuck.Quack();
+            decoyDuck.Swim();
+            decoyDuck.Fly();
+
             Duck userDuck = null;
 
             while (userDuck == null)
             {
-                Console.WriteLine("What duck would you like to observe? Mallard, Redhead or Rubber?");
+                Console.WriteLine("What duck would you like to observe? Mallard, Redhead, Rubber or Decoy?");
                 var choice = Console.ReadLine().ToLower();
 
                 switch (choice.Split(' ')[0])
@@ -43,6 +49,9 @@ namespace StrategyPatternDuck
                         break;
                     case "rubber":
                         userDuck = new RubberDuck();
+                        break;
+                    case "decoy":
+                        userDuck = new DecoyDuck();
                         break;
                     default:
                         Console.WriteLine("Sorry, try again (spelling matters, so check carefully).");
