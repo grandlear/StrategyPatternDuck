@@ -6,22 +6,20 @@ namespace StrategyPatternDuck
 {
     public class RedheadDuck : Duck
     {
-        private IFlyBehavior _FlyBehavior;
-        private IQuackBehavior _QuackBehavior;
+        private IFlyBehavior _flyBehavior = new FlyWithWings();
+        private IQuackBehavior _quackBehavior = new QuackQuack();
         public override void Display()
         {
             Console.WriteLine("I am a redhead duck.");
         }
         public override void PerformFly()
         {
-            this._FlyBehavior = new FlyWithWings();
-            this._FlyBehavior.Fly();
+            _flyBehavior.Fly();
         }
 
         public override void PerformQuack()
         {
-            this._QuackBehavior = new QuackQuack();
-            this._QuackBehavior.Quack();
+            _quackBehavior.Quack();
         }
     }
 }

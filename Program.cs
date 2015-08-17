@@ -14,11 +14,15 @@ namespace StrategyPatternDuck
             redheadDuck.Swim();
             redheadDuck.PerformFly();
 
+            Console.WriteLine();
+
             Duck mallardDuck = new MallardDuck();
             mallardDuck.Display();
             mallardDuck.PerformQuack();
             mallardDuck.Swim();
             mallardDuck.PerformFly();
+
+            Console.WriteLine();
 
             Duck rubberDuck = new RubberDuck();
             rubberDuck.Display();
@@ -26,11 +30,15 @@ namespace StrategyPatternDuck
             rubberDuck.Swim();
             rubberDuck.PerformFly();
 
+            Console.WriteLine();
+
             Duck decoyDuck = new DecoyDuck();
             decoyDuck.Display();
             decoyDuck.PerformQuack();
             decoyDuck.Swim();
             decoyDuck.PerformFly();
+
+            Console.WriteLine();
 
             Duck userDuck = null;
 
@@ -65,6 +73,8 @@ namespace StrategyPatternDuck
             userDuck.PerformQuack();
             userDuck.Swim();
             userDuck.PerformFly();
+
+            Console.WriteLine();
 
             Console.WriteLine("Thanks for visiting.  Come back soon!");
             Console.ReadLine();

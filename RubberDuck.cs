@@ -6,21 +6,19 @@ namespace StrategyPatternDuck
 {
     public class RubberDuck : Duck
     {
-        private IQuackBehavior _QuackBehavior;
-        private IFlyBehavior _FlyBehavior;
+        private IQuackBehavior _quackBehavior = new Squeak();
+        private IFlyBehavior _flyBehavior = new FlyNoWay();
         public override void Display()
         {
             Console.WriteLine("I am a rubber duck.");
         }
         public override void PerformQuack()
         {
-            this._QuackBehavior = new Squeak();
-            this._QuackBehavior.Quack();
+            _quackBehavior.Quack();
         }
         public override void PerformFly()
         {
-            this._FlyBehavior = new FlyNoWay();
-            this._FlyBehavior.Fly();
+            _flyBehavior.Fly();
         }
     }
 }

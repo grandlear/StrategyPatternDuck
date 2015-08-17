@@ -6,21 +6,19 @@ namespace StrategyPatternDuck
 {
     public class DecoyDuck : Duck
     {
-        private IFlyBehavior _FlyBehavior;
-        private IQuackBehavior _QuackBehavior;
+        private IFlyBehavior _flyBehavior = new FlyNoWay();
+        private IQuackBehavior _quackBehavior = new MuteQuack();
         public override void Display()
         {
             Console.WriteLine("I am a wooden decoy duck.");
         }
         public override void PerformQuack()
         {
-            this._QuackBehavior = new MuteQuack();
-            this._QuackBehavior.Quack();
+            _quackBehavior.Quack();
         }
         public override void PerformFly()
         {
-            this._FlyBehavior = new FlyNoWay();
-            this._FlyBehavior.Fly();
+            _flyBehavior.Fly();
         }
     }
 }
